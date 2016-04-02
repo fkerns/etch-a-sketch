@@ -50,5 +50,25 @@ $(document).ready(function() {
 		}
 	});
 
+	$('#fade').click(function() {
+		$('.grid').mouseenter(function() {
+			$(this).fadeTo('fast', 0);
+		});
+		$('.grid').mouseleave(function() {
+			$(this).fadeTo('slow', 1);
+		});
+		$('.grid').hover(function() {
+			$(this).css('background-color', '#ff66ff');
+		});
+		$('.newGrid').mouseenter(function() {
+			$(this).fadeTo('fast', 0);
+		});
+		$('.newGrid').mouseleave(function() {
+			$(this).fadeTo('slow', 1);
+		});
+		$('.newGrid').hover(function() {
+			$(this).css('background-color', '#ff66ff');
+		});
+	});
 
 });

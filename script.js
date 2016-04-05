@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	//allow user input and create grids based on the number of squares the user wants
 	function createGrid() {
 		var count = 0
 		while(count < 144) {
@@ -26,6 +25,8 @@ $(document).ready(function() {
 		$('.newGrid').hide();
 	}
 
+// random color generator found on stack overflow
+
 	function getRandomColor() {
     	var letters = '0123456789ABCDEF'.split('');
     	var color = '#';
@@ -35,18 +36,6 @@ $(document).ready(function() {
     	return color;
 	}
 
-	// DOESN'T WORK
-	// function sketchVersion() {
-	// 	var fade = 1
-	// 	var count = 0
-	// 	$('.grid').hover(function() {
-	// 		while (count < 4) {
-	// 			$(this).fadeTo('fast', fade);
-	// 			count = count + 1;
-	// 			fade = fade - 0.2;
-	// 		}
-	// 	});
-	// }
 
 	createGrid();
 
@@ -98,7 +87,7 @@ $(document).ready(function() {
 			$(this).css('background-color', '#ff66ff');
 		});
 	});
-//keeps on fading even after normal is clicked again? how to undo jquery functions
+
 	$('#normal').click(function() {
 		createGrid();
 		$('.grid').hover(function() {
@@ -120,13 +109,6 @@ $(document).ready(function() {
 			$(this).fadeTo('fast', 1);
 		});
 	});
-
-	//make a version that you have to pass the mouse over a few times before it's white
-
-
-	// $('#sketch').click(function() {
-	// 	sketchVersion();
-	// });
 	
 
 	$('#random').click(function() {
